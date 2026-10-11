@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiply | Table Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">✦ Multiply</div>
+        <div class="nav-label">Smart Math Tool</div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <span class="tag">✦ SIMPLE. FAST. SMART.</span>
+
+            <h1>Multiplication made <span>beautiful.</span></h1>
+
+            <p class="description">
+                Enter any number and discover its multiplication table
+                instantly. Learning math has never been this easy.
+            </p>
+
+            <div class="generator">
+                <label for="number">Enter your number</label>
+
+                <div class="input-group">
+                    <input
+                        type="number"
+                        id="number"
+                        placeholder="e.g. 7"
+                        min="0"
+                        max="1000000"
+                        step="any"
+                    >
+
+                    <button id="generateBtn" type="button">
+                        Generate Table →
+                    </button>
+                </div>
+
+                <p class="hint">Your table will be calculated up to ×10.</p>
+                <p id="error" class="error" role="alert"></p>
+            </div>
+        </section>
+
+        <section class="results" aria-live="polite">
+            <div class="results-header">
+                <div>
+                    <h2>Your multiplication table</h2>
+                    <p id="resultSubtitle">
+                        Your results will appear here.
+                    </p>
+                </div>
+                <span class="result-icon">×</span>
+            </div>
+
+            <div id="tableOutput" class="table-grid">
+                <div class="empty-state">
+                    <span class="empty-icon">✳</span>
+                    <h3>Ready to multiply?</h3>
+                    <p>Enter a number above to see your table.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Made with <span>♥</span> for curious minds.</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
