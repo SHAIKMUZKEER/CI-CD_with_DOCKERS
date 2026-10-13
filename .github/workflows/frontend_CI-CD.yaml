@@ -39,7 +39,6 @@ jobs:
     needs: build-and-test
     runs-on: ubuntu-latest
 
-    # Publish only on pushes to main
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
 
     steps:
@@ -64,4 +63,5 @@ jobs:
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/multiplication-frontend:latest
 
       - name: Display image digest
-        run: echo "Image digest: ${{ steps.build-and-push.outputs.digest }}"
+        run: |
+          echo "Image digest: ${{ steps.build-and-push.outputs.digest }}"
