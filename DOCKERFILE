@@ -6,7 +6,7 @@ FROM nginx:alpine
 COPY src/ /usr/share/nginx/html/
 
 # Expose the web server port
-EXPOSE 80
+EXPOSE 5000
 
 # Run Nginx in the foreground
 CMD ["nginx", "-g", "daemon off;"]
